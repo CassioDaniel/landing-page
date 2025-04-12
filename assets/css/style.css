@@ -32,7 +32,48 @@ body {
     transition: transform 0.3s ease-out;
 }
 
-h1 {
-    color: var(--color-destaque1);
-    font-family: var(--font-pequena);
+.header {
+    user-select: none;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    padding: 2rem 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 99;
+    transition: top 0.3s ease-in-out;
+    background-color: rgba(0, 0, 0, .9); 
+    backdrop-filter: blur(10px); 
+    -webkit-backdrop-filter: blur(10px); 
+}
+
+.logo {
+    width: 100%;
+}
+
+.logo img {
+    width: 150px;
+}
+
+/* Menu */
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    position: relative;
+    z-index: 100;
+}
+
+.hamburger {
+    cursor: pointer;
+}
+
+.hamburger input {
+    display: none;
+}
+
+.hamburger svg {
+    height: 3em;
+    transition: transform 600ms cubic-bezier(0.4, 0, 0.2, 1);
 }
